@@ -12,5 +12,9 @@ require("./jobs/TaskFunctions");
 
 
 
+
+app.get('/', (req, res)=>{
+    res.status(200).send('<h1>Hola Mundo con Nodemon!</h1>')
+})
 app.listen(app.get("port"), 
 () => console.log(`Escuchando en servidor puerto : ${app.get("port")}`));
