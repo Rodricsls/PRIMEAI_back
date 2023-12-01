@@ -9,6 +9,10 @@ const { authenticateToken } = require("../middleware/authMiddleware.js");
 
 module.exports = (app) => {
     //Endpoint /login verifica si existe el usuario
+
+    app.get('/', (req, res)=>{
+        res.status(200).send('<h1>Hola Mundo con Nodemon!</h1>')
+    });
     app.post('/login', async (req, res) => {
         try{
             const values=[req.body.correo];
